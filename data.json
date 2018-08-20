@@ -1,0 +1,81 @@
+{
+	"items": [
+		{
+			"id": "3",
+			"price": "10",
+			"url": "item.html?id=3",
+			"image": "img/dirty_shirty_03.jpg",
+			"name": "dirtyShirty Worky™",
+			"category": "clothes",
+			"snippet": "The original shirt for work.",
+			"description": "The Worky model is ideal for working. It is easy to wash, iron but please, keep it clean. Our közmunkások made it very carefully. We use hungarian blood sweat and dirt to make you a very creative and fashonable shirt."
+		}, {
+			"id": "2",
+			"price": "12",
+			"url": "item.html?id=2",
+			"image": "img/dirty_shirty_02.jpg",
+			"name": "dirtyShirty Girly™",
+			"category": "clothes",
+			"snippet": "Good shirt for parties and dates.",
+			"description": "This is the girl power shirt for every woman. Wear if for dates, business meeting, girlie nights out or bitching. With girly you can show the world you are proud to be a Girl."
+		}, {
+			"id": "1",
+			"price": "8",
+			"url": "item.html?id=1",
+			"image": "img/dirty_shirty_01.jpg",
+			"name": "dirtyShirty Dirty™",
+			"category": "clothes",
+			"snippet": "The best for rock concerts.",
+			"description": "Dirty. The names says it all. Make it dirty man. The dirt is yours."
+		}, {
+			"id": "4",
+			"price": "6",
+			"url": "item.html?id=4",
+			"image": "img/smoker_smell01.png",
+			"name": "SmokerSmell GeoDeo™",
+			"category": "hygene",
+			"snippet": "You can smell like a smoker.",
+			"description": "You dont addicted to nicotine but want to smell like a smoker? It is not a problem. Use GeoDeo and you can have a smoker bg/gf."
+		}
+	],
+	"footer": [
+    {
+      "url": "contact.html",
+      "name": "Contact"
+    },
+    {
+      "url": "newsletter.html",
+      "name": "Newsletter"
+    },
+    {
+      "url": "impressum.html",
+      "name": "Impressum"
+    },
+    {
+      "url": "facebook.com",
+      "name": "Facebook"
+    },
+    {
+      "url": "twitter.com",
+      "name": "Twitter"
+    },
+    {
+      "url": "youtube.com",
+      "name": "YouTube"
+    }
+  ],
+	"menu": [
+    {
+      "url": "about.html",
+      "name": "ABOUT US"
+    },
+    {
+      "url": "shop.html",
+      "name": "SHOP"
+    },
+    {
+      "url": "cart.html",
+      "name": "CART"
+    }
+  ]
+}

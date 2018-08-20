@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="siteController">
+<head>
+<title>dirtyShirty</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="css/ds.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.min.js"></script>
+<script src="js/dsang.js"></script>
+<script src="https://use.fontawesome.com/a1403016a7.js"></script>
+</head>
+<body>
+	<header>
+		<img src="img/dirty_shirty_logo_small.png">
+		<nav>
+			<ul>
+				<a ng-repeat="menu in menus" href="{{menu.url}}"><li>{{menu.name}}</li></a>
+				<a ng-click="Login()"><li>{{loginButton}}</li></a>
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<article>
+			<p>Welcome here!</p>
+			<p>This is the site of my fantasy company [dirtyShirty] and it's product. So this is my fantasy webshop. Now you can login and logout by cookies and I am planning to add cart by cookies aswell.</p>
+			<p>Take a look at it and enjoy. Reviews are apprechiated.</p>
+		</article>
+	</div>
+	<footer>
+		<ul>
+			<!--li ng-repeat="footer in footers"><a href="{{footer.url}}">{{footer.name}}</a></li-->
+		</ul>
+	</footer>
+</body>
+</html>

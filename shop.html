@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="rootApp">
+<head>
+<title>SHOP - dirtyShirty</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="css/ds.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.min.js"></script>
+<script src="js/dsang.js"></script>
+<script src="https://use.fontawesome.com/a1403016a7.js"></script>
+</head>
+<body>
+	<header>
+		<img src="img/dirty_shirty_logo_small.png">
+		<nav ng-controller="siteController">
+			<ul>
+				<a ng-repeat="menu in menus" href="{{menu.url}}"><li>{{menu.name}}</li></a>
+				<a ng-click="Login()"><li>{{loginButton}}</li></a>
+			</ul>
+		</nav>
+	</header>
+	<div class="container" ng-controller="itemListController">
+		<ul class="options">
+			<li>Filter: <input ng-model="filterselector"></li>
+			<li>Order:
+				<input type="radio" ng-model="orderselector" value="id">id
+				<input type="radio" ng-model="orderselector" value="price">price
+			</li>
+		</ul>
+		<ul class="items">
+			<li class="item" ng-repeat="item in items | orderBy: orderselector | filter: filterselector">
+				<div class="itemImage">
+					<img src="{{item.image}}">
+				</div>
+				<h2><a href="{{item.url}}">{{item.name}}</a></h2>
+				<p>{{item.snippet}}</p>
+			</li>
+		  </ul>
+	</div>
+	<footer ng-controller="siteController">
+		<ul>
+			<li ng-repeat="footer in footers"><a href="{{footer.url}}">{{footer.name}}</a></li>
+		</ul>
+	</footer>
+</body>
+</html>

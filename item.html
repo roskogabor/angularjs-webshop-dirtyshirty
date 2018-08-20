@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="rootApp">
+<head>
+<title ng-controller="itemController">{{name}} - dirtyShirty</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="css/ds.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.min.js"></script>
+<script src="js/dsang.js"></script>
+<script src="https://use.fontawesome.com/a1403016a7.js"></script>
+</head>
+<body>
+	<header>
+		<img src="img/dirty_shirty_logo_small.png">
+		<nav ng-controller="siteController">
+			<ul>
+				<a ng-repeat="menu in menus" href="{{menu.url}}"><li>{{menu.name}}</li></a>
+				<a ng-click="Login()"><li>{{loginButton}}</li></a>
+			</ul>
+		</nav>
+	</header>
+	<div class="container" ng-controller="itemController">
+		<ul class="itemDetails">
+			<li class="currentItem">
+				<div class="itemHeader">
+					<div class="itemImage {{imageClass}}">
+						<i class="fa fa-search-{{imageIcon}} fa-2x" ng-click="Zoom()"></i>
+						<img src="{{image}}">
+					</div>
+					<i class="fa fa-cart-plus fa-2x" ng-if="name != 'there is no item'" ng-click="AddToCart()"></i>
+					<i class="fa fa-heart fa-2x" ng-if="name != 'there is no item'" ng-click="AddToWishList()"></i>
+				</div>
+				<div class="itemDescription">
+					<h2>{{name}}</h2>
+					<span>price: {{price}}$</span><br>
+					<span>category: {{category}}</span>
+					<p>{{description}}</p>
+				</div>
+			</li>
+		</ul>
+		<aside class="items" ng-controller="itemListController">
+			<h1>Similar items</h1>
+			<ul class="items">
+				<li class="item" ng-repeat="item in items | orderBy:'id'" ng-if="item.id != id && item.category == category">
+					<div class="itemImage">
+						<img src="{{item.image}}">
+					</div>
+					<h2><a href="{{item.url}}">{{item.name}}</a> {{item.price}}$</h2>
+				</li>
+			  </ul>
+		</aside>
+	</div>
+	<footer ng-controller="siteController">
+		<ul>
+			<li ng-repeat="footer in footers"><a href="{{footer.url}}">{{footer.name}}</a></li>
+		</ul>
+	</footer>
+</body>
+</html>

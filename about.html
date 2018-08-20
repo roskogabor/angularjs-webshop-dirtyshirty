@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="rootApp">
+<head>
+<title>ABOUT - dirtyShirty</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="css/ds.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-cookies.min.js"></script>
+<script src="js/dsang.js"></script>
+<script src="https://use.fontawesome.com/a1403016a7.js"></script>
+</head>
+<body>
+	<header>
+		<img src="img/dirty_shirty_logo_small.png">
+		<nav ng-controller="siteController">
+			<ul>
+				<a ng-repeat="menu in menus" href="{{menu.url}}"><li>{{menu.name}}</li></a>
+				<a ng-click="Login()"><li>{{loginButton}}</li></a>
+			</ul>
+		</nav>
+	</header>
+	<div class="container" ng-view>
+		<article>
+			<p>Bored of cheap fast fashion clothes made in Cambodgia or Bangladesh? We have good news for you. We bring you the new dirtyShirty clothes. We've original hungarian 'közmunkások' in our factories.</p>
+			<p>Don't be the same as everybody at your multinational company. They gonna love your style, be proud you have it.</p>
+			<p>We started with clothes [shirts], but now we got that good fresh SmellSmoker GeoDeo.</p>
+		</article>
+	</div>
+	<footer ng-controller="siteController">
+		<ul>
+			<li ng-repeat="footer in footers"><a href="{{footer.url}}">{{footer.name}}</a></li>
+		</ul>
+	</footer>
+</body>
+</html>
