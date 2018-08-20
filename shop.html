@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="rootApp">
+<html ng-app="app" ng-controller="siteController">
 <head>
 <title>SHOP - dirtyShirty</title>
 <meta charset="utf-8">
@@ -21,7 +21,7 @@
 			</ul>
 		</nav>
 	</header>
-	<div class="container" ng-controller="itemListController">
+	<div class="container">
 		<ul class="options">
 			<li>Filter: <input ng-model="filterselector"></li>
 			<li>Order:
@@ -39,7 +39,7 @@
 			</li>
 		  </ul>
 	</div>
-	<footer ng-controller="siteController">
+	<footer>
 		<ul>
 			<li ng-repeat="footer in footers"><a href="{{footer.url}}">{{footer.name}}</a></li>
 		</ul>

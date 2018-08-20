@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html ng-app="rootApp">
+<html ng-app="app" ng-controller="siteController">
 <head>
-<title ng-controller="itemController">{{name}} - dirtyShirty</title>
+<title>{{name}} - dirtyShirty</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -21,7 +21,7 @@
 			</ul>
 		</nav>
 	</header>
-	<div class="container" ng-controller="itemController">
+	<div class="container">
 		<ul class="itemDetails">
 			<li class="currentItem">
 				<div class="itemHeader">
@@ -40,7 +40,7 @@
 				</div>
 			</li>
 		</ul>
-		<aside class="items" ng-controller="itemListController">
+		<aside class="items">
 			<h1>Similar items</h1>
 			<ul class="items">
 				<li class="item" ng-repeat="item in items | orderBy:'id'" ng-if="item.id != id && item.category == category">
@@ -52,7 +52,7 @@
 			  </ul>
 		</aside>
 	</div>
-	<footer ng-controller="siteController">
+	<footer>
 		<ul>
 			<li ng-repeat="footer in footers"><a href="{{footer.url}}">{{footer.name}}</a></li>
 		</ul>

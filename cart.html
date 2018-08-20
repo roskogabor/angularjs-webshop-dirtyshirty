@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="rootApp">
+<html ng-app="app" ng-controller="siteController">
 <head>
 <title>CART - dirtyShirty</title>
 <meta charset="utf-8">
@@ -14,14 +14,14 @@
 <body>
 	<header>
 		<img src="img/dirty_shirty_logo_small.png">
-		<nav ng-controller="siteController">
+		<nav>
 			<ul>
 				<a ng-repeat="menu in menus" href="{{menu.url}}"><li>{{menu.name}}</li></a>
 				<a ng-click="Login()"><li>{{loginButton}}</li></a>
 			</ul>
 		</nav>
 	</header>
-	<div class="container" ng-controller="cartController">
+	<div class="container">
 		<ul class="cartItems">
 			<h1>{{title}}:</h1>
 			<li class="cartItem" ng-repeat="c in cart | orderBy:'id'">
@@ -30,7 +30,7 @@
 			<li ng-if="cart.length < 1">You have no item in cart</li>
 			<h2>All: {{allPrice}}$</h2>
 		</ul>
-		<aside class="items" ng-controller="itemListController">
+		<aside class="items">
 			<h1>Similar items</h1>
 			<ul class="items">
 				<li class="item" ng-repeat="item in items | orderBy:'id'">
@@ -42,7 +42,7 @@
 			  </ul>
 		</aside>
 	</div>
-	<footer ng-controller="siteController">
+	<footer>
 		<ul>
 			<li ng-repeat="footer in footers"><a href="{{footer.url}}">{{footer.name}}</a></li>
 		</ul>
