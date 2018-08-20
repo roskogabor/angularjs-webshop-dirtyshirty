@@ -1,4 +1,17 @@
-angular.module('app', ['ngCookies'])
+angular.module('app', ["ngRoute", 'ngCookies'])
+.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "about.html",
+    })
+    .when("/item", {
+        templateUrl : "item.html",
+    })
+		.when("/shop", {
+        templateUrl : "shop.html",
+    })
+    .otherwise({redirectTo:'/'});
+})
 .controller('siteController', siteController);
 
 function siteController($scope, $window, $cookies, $http, $location) {
